@@ -1,0 +1,124 @@
+body{
+    overflow: hidden;
+    
+}
+.sky{
+    position: relative;
+    background-image: url('CarAminated/background.jpg');
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat; 
+    /* animation-name: skyShake;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: both; */
+    
+}
+.trees{
+    position: absolute;
+    background-image: url('CarAminated/trees.png');
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    top: -126px;
+    animation-name: treeMove;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+.track{
+    position:absolute;
+    background-image: url('CarAminated/track.png');
+    background-repeat: repeat-x;
+    width: 800vw;
+    height: 60vw;
+    top: 500px;
+    /* background-size: cover; */
+    animation-name: trackMove;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* margin-right: 0px; */
+    /* padding-right: 0px; */
+}
+.car{
+    background-image: url('CarAminated/car_body.png');
+    position: absolute;
+    height: 100px;
+    background-repeat: no-repeat;
+    /* border: 2px solid black; */
+    width: 380px;
+    top: 425px;
+    background-size: cover;
+    left: 402px;
+    /* animation: shake linear .3s infinite; */
+     animation-name: shake;
+    animation-timing-function: ease;
+    animation-duration: .9s;
+    animation-iteration-count: infinite; 
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    
+    
+}
+img{
+    position:absolute;
+    width: 70px;
+    height: 70px;
+    top: -51px;
+    animation: wheelRotation linear .16s infinite;;
+}
+div.wheel1{
+    position: absolute;
+    /* border: 2px solid black; */
+    width: 10px;
+    height: 100px;
+    top: 90px;
+    left: 47px;
+    
+}
+div.wheel2{
+    position: absolute;
+    /* border: 2px solid black; */
+    width: 100px;
+    height: 70px;
+    top: 94px;
+    left: 240px;
+
+}
+@keyframes shake {
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+@keyframes wheelRotation{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes trackMove {
+    100%{
+        transform: translateX(-500px);
+    }
+}
+@keyframes treeMove{
+    30%{
+        transform: translateY(-10px);
+    }
+    60%{
+        transform: translateY(-20px);
+    }
+    90%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
